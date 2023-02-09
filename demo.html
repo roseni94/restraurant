@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Restraurant</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="style2.css">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:url("download.jpg");
+  min-height: 90%;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="RR-top RR-hide-small">
+  <div class="RR-bar RR-xlarge RR-black RR-opacity RR-hover-opacity-off" id="myNavbar">
+    <a href="#" class="RR-bar-item RR-button">HOME</a>
+    <a href="#menu" class="RR-bar-item RR-button">MENU</a>
+    <a href="#about" class="RR-bar-item RR-button">ABOUT</a>
+    <a href="#myMap" class="RR-bar-item RR-button">CONTACT</a>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg RR-display-container RR-grayscale-min" id="home">
+  <div class="RR-display-bottomleft RR-padding">
+    <span class="RR-tag RR-xlarge">Open from 10am to 12pm</span>
+  </div>
+  <div class="RR-display-middle RR-center">
+    <span class="RR-text-white RR-hide-small" style="font-size:100px">yummm<br>RO RO Restraurant</span>
+    <span class="RR-text-white RR-hide-large RR-hide-medium" style="font-size:60px"><b>thin<br>CRUST PIZZA</b></span>
+    <p><a href="#menu" class="RR-button RR-xxlarge RR-black">Let me see the menu</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="RR-container RR-black RR-padding-64 RR-xxlarge" id="menu">
+  <div class="RR-content">
+  
+    <h1 class="RR-center RR-jumbo" style="margin-bottom:64px">THE MENU</h1>
+    <div class="RR-row RR-center RR-border RR-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="RR-col s4 tablink RR-padding-large RR-hover-red">Pizza</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="RR-col s4 tablink RR-padding-large RR-hover-red">Salads</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="RR-col s4 tablink RR-padding-large RR-hover-red">Starter</div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="RR-container menu RR-padding-32 RR-white">
+      <h1><b>Margherita</b> <span class="RR-right RR-tag RR-dark-grey RR-round">$12.50</span></h1>
+      <p class="RR-text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+   
+      <h1><b>Formaggio</b> <span class="RR-right RR-tag RR-dark-grey RR-round">$15.50</span></h1>
+      <p class="RR-text-grey">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+      <hr>
+      
+      <h1><b>Chicken</b> <span class="RR-right RR-tag RR-dark-grey RR-round">$17.00</span></h1>
+      <p class="RR-text-grey">Fresh tomatoes, mozzarella, chicken, onions</p>
+      <hr>
+
+      <h1><b>Pineapple'o'clock</b> <span class="RR-right RR-tag RR-dark-grey RR-round">$16.50</span></h1>
+      <p class="RR-text-grey">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
+      <hr>
+
+      <h1><b>Meat Town</b> <span class="RR-tag RR-red RR-round">Hot!</span><span class="RR-right RR-tag RR-dark-grey RR-round">$20.00</span></h1>
+      <p class="RR-text-grey">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
+      <hr>
+
+      <h1><b>Parma</b> <span class="RR-tag RR-grey RR-round">New</span><span class="RR-right RR-tag RR-dark-grey RR-round">$21.50</span></h1>
+      <p class="RR-text-grey">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+    </div>
+
+    <div id="Pasta" class="RR-container menu RR-padding-32 RR-white">
+      <h1><b>Lasagna</b> <span class="RR-tag RR-grey RR-round">Popular</span> <span class="RR-right RR-tag RR-dark-grey RR-round">$13.50</span></h1>
+      <p class="RR-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
+      <hr>
+   
+      <h1><b>Ravioli</b> <span class="RR-right RR-tag RR-dark-grey RR-round">$14.50</span></h1>
+      <p class="RR-text-grey">Ravioli filled with cheese</p>
+      <hr>
+      
+      <h1><b>Spaghetti Classica</b> <span class="RR-right RR-tag RR-dark-grey RR-round">$11.00</span></h1>
+      <p class="RR-text-grey">Fresh tomatoes, onions, ground beef</p>
+      <hr>
+
+      <h1><b>Seafood pasta</b> <span class="RR-right RR-tag RR-dark-grey RR-round">$25.50</span></h1>
+      <p class="RR-text-grey">Salmon, shrimp, lobster, garlic</p>
+    </div>
+
+
+    <div id="Starter" class="RR-container menu RR-padding-32 RR-white">
+      <h1><b>Today's Soup</b> <span class="RR-tag RR-grey RR-round">Seasonal</span><span class="RR-right RR-tag RR-dark-grey RR-round">$5.50</span></h1>
+      <p class="RR-text-grey">Ask the waiter</p>
+      <hr>
+   
+      <h1><b>Bruschetta</b> <span class="RR-right RR-tag RR-dark-grey RR-round">$8.50</span></h1>
+      <p class="RR-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
+      <hr>
+      
+      <h1><b>Garlic bread</b> <span class="RR-right RR-tag RR-dark-grey RR-round">$9.50</span></h1>
+      <p class="RR-text-grey">Grilled ciabatta, garlic butter, onions</p>
+      <hr>
+      
+      <h1><b>Tomozzarella</b> <span class="RR-right RR-tag RR-dark-grey RR-round">$10.50</span></h1>
+      <p class="RR-text-grey">Tomatoes and mozzarella</p>
+    </div><br>
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="RR-container RR-padding-64 RR-red RR-grayscale RR-xlarge" id="about">
+  <div class="RR-content">
+    <h1 class="RR-center RR-jumbo" style="margin-bottom:64px">About</h1>
+    <p>Starting out in 2011,Ro Ro restaurant was a food delivery platform.it Think like Zomato or Swiggy, With this business model, we achieved a respectable mark in 2 years: serving over 200 corporates by partnering with 300+ restaurants.</p>
+    <p><strong>The Chef?</strong> Ms. Rohi<img src="download1.jpg" style="width:150px" class="RR-circle RR-right" alt="Chef"></p>
+    <p>We are proud of our interiors.</p>
+    <img src="download2.jpg" style="width:100%" class="RR-margin-top RR-margin-bottom" alt="Restaurant">
+    <h1><b>Opening Hours</b></h1>
+    
+    <div class="RR-row">
+      <div class="RR-col s6">
+        <p>Mon & Tue CLOSED</p>
+        <p>Wednesday 10.00 - 24.00</p>
+        <p>Thursday 10:00 - 24:00</p>
+      </div>
+      <div class="RR-col s6">
+        <p>Friday 10:00 - 12:00</p>
+        <p>Saturday 10:00 - 23:00</p>
+        <p>Sunday Closed</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="/RRimages/map.jpg" class="RR-image RR-greyscale" style="width:100%;" id="myMap">
+
+<!-- Contact -->
+<div class="RR-container RR-padding-64 RR-blue-grey RR-grayscale-min RR-xlarge">
+  <div class="RR-content">
+    <h1 class="RR-center RR-jumbo" style="margin-bottom:64px">Contact</h1>
+    <p>Find us at some address at some place or call us at 3647869166</p>
+    <p><span class="RR-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p class="RR-xxlarge"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="RR-input RR-padding-16 RR-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="RR-input RR-padding-16 RR-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="RR-input RR-padding-16 RR-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="RR-input RR-padding-16 RR-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="RR-button RR-light-grey RR-block" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="RR-center RR-black RR-padding-48 RR-xxlarge">
+  <p>Created by Roseni</p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" RR-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " RR-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
